@@ -3917,3 +3917,9 @@
 			}
 
 		}
+		
+		.style3 a { color :indigo;
+		}
+		
+		.label2 { display:block; color:white; font-size:small;}
+		.reseau { align : center;}
