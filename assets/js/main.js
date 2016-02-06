@@ -171,10 +171,22 @@
 						$image = $this.find('.image'),
 						$img = $image.find('img'),
 						x;
-
+						
+					var $sourcei=$img.attr('src');
+					
+					console.log(document.body.clientWidth);
+					if (document.body.clientWidth<980) {
+						
+						if ($sourcei=='images/os.jpg') {
+							$sourcei='images/os2.jpg';
+						}
+						if ($sourcei=='images/webdesign.jpg') {
+							$sourcei='images/webdesign2.jpg';
+						}
+					}
 					// Assign image.
-						$image.css('background-image', 'url(' + $img.attr('src') + ')');
-
+						$image.css('background-image', 'url(' + $sourcei + ')');
+						
 					// Set background position.
 						if (x = $img.data('position'))
 							$image.css('background-position', x);

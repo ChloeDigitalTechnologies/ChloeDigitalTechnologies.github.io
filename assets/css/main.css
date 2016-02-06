@@ -2593,11 +2593,13 @@
 		border: 0;
 		display: inline-block;
 		position: relative;
+		background-color: black;
 	}
 
 		.image img {
 			border-radius: 0.25em;
 			display: block;
+			object-fit: contain;
 		}
 
 		.image.left, .image.right {
@@ -3923,3 +3925,20 @@
 		
 		.label2 { display:block; color:white; font-size:small;}
 		.reseau { align : center;}
+		
+		#merci { text-align:center; margin:auto;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			overflow:hidden;
+			text-align:center;
+		}
+		
+		#mercicontent {
+			position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  transform: translate(-50%, -50%);
+		}
