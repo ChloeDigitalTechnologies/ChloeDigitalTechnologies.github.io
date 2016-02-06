@@ -175,7 +175,7 @@
 					var $sourcei=$img.attr('src');
 					
 					console.log(document.body.clientWidth);
-					if (document.body.clientWidth<980) {
+					if ((document.body.clientWidth>480)&&(document.body.clientWidth<980)) {
 						
 						if ($sourcei=='images/os.jpg') {
 							$sourcei='images/os2.jpg';
