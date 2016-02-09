@@ -1,5 +1,7 @@
 {
+	"lang": "fr",
 	"name": "Chlo\u00e9 Digital Technologies",
+	"short_name": "Chlo\u00e9 DigTech",
 	"icons": [
 		{
 			"src": "\/icons\/android-chrome-36x36.png",
@@ -38,4 +40,5 @@
 			"density": 4
 		}
 	]
+	"start_url": "/index.html"
 }
