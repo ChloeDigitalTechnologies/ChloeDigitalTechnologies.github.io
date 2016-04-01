@@ -1,0 +1,30 @@
+#page-home{
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+video#bgvid {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: 100%; height: 100%; z-index: -100;
+  background: url(images/logo.png) no-repeat;
+  background-size: cover;
+}
+#vidpause { display: block; float:none; margin:auto; }
+#vidpausediv {display: block; position: absolute; bottom: 5%; text-align: center;width : 100%; margin:0 auto;}
+@media screen and (max-device-width: 800px) {
+	html { background: url(polina.jpg) #000 no-repeat center center fixed; }
+	#bgvid { display: none; }
+	#vidpause { display: none; }
+}
+
+video#bgvid { transition: 1s opacity; }
+.stopfade { opacity: .5; }
+
+
+.logo-poster{
+	width:50%;
+	height:auto;
+	box-shadow: 1px 1px 12px #555;
+}
