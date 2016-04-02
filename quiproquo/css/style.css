@@ -1,30 +1,90 @@
 #page-home{
 	text-align: center;
-	display: table-cell;
+	/*display: table-cell;*/
 	vertical-align: middle;
 }
 
-video#bgvid {
-  position: fixed; right: 0; bottom: 0;
-  min-width: 100%; min-height: 100%;
-  width: 100%; height: 100%; z-index: -100;
-  background: url(images/logo.png) no-repeat;
-  background-size: cover;
-}
+
+
 #vidpause { display: block; float:none; margin:auto; }
 #vidpausediv {display: block; position: absolute; bottom: 5%; text-align: center;width : 100%; margin:0 auto;}
 @media screen and (max-device-width: 800px) {
-	html { background: url(polina.jpg) #000 no-repeat center center fixed; }
+	html { background: url(images/logo.png) #000 no-repeat center center fixed; }
 	#bgvid { display: none; }
 	#vidpause { display: none; }
 }
 
-video#bgvid { transition: 1s opacity; }
+
+video#bgvid { position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/logo.png') no-repeat;
+  background-size: cover;
+  transition: 1s opacity; }
 .stopfade { opacity: .5; }
 
+.Centerer
+{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
 
 .logo-poster{
+	display: inline-block;
+    vertical-align: middle;
 	width:50%;
 	height:auto;
 	box-shadow: 1px 1px 12px #555;
+}
+
+#sswrapper{
+	position: absolute;
+	top:0;
+	left:0;
+	min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+	text-align: center;
+	/*display: table-cell;*/
+	vertical-align: middle;
+}
+.Centerer
+{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+#slideshow { 
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 50%;
+    min-height: 50%;
+    width: 50%;
+    height: 50%;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+	
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px;
+}
+
+.ssi{
+	width:100%;
+	height:auto;
 }

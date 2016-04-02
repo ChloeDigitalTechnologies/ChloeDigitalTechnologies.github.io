@@ -45,6 +45,7 @@
 		</script>
 	<![endif]-->
 	<script src="js/modernizr-custom.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 </head>
 
 <body>
@@ -75,6 +76,7 @@
 				<source src="videos/bg.webm" type="video/webm">
 				<source src="videos/bg.mp4" type="video/mp4">
 			</video>
+			<span class="Centerer"></span>
 			<img class="logo-poster" src="images/logo.png" alt="logo" />
 			<div id="vidpausediv">
 			<button class="button button--ujarak button--border-thin button--text-thick" id="vidpause">Pause</button>
@@ -84,12 +86,28 @@
 		<div class="page" id="page-showroom">
 			<header class="bp-header cf">
 				<h1 class="bp-header__title">ShowRoom</h1>
-			<p class="bp-header__desc">Joli Slide</a></p>
+			<!--	<p class="bp-header__desc">Joli Slide</a></p>
 				<p class="info">
 					"We cannot have peace among men whose hearts find delight in killing any living creature." &mdash; Rachel Carson
-				</p>
+			</p>-->
 			</header>
-			<img class="poster" src="images/01.png" alt="img06" />
+			<div id="sswrapper">
+			<span class="Centerer"></span>
+			<div id="slideshow">
+			   <div>
+				 <img class="ssi" src="images/01.jpg">
+			   </div>
+			   <div>
+				 <img class="ssi" src="images/03.jpg">
+			   </div>
+			   <div>
+				 <img class="ssi" src="images/05.jpg">
+			   </div>
+			   <div>
+				 En fait on peut mettre n'inporte quoi, du texte et des images
+			   </div>
+			</div>
+			</div>
 		</div>
 		<div class="page" id="page-shopping">
 			<header class="bp-header cf">
@@ -99,7 +117,7 @@
 					"When you adopt a vegan diet we make a connection, you don't go back, it is not a diet, it is a lifestyle." &mdash; Freelee Frugivore
 				</p>
 			</header>
-			<img class="poster" src="images/03.png" alt="img02" />
+			<img class="poster" src="images/03.jpg" alt="img02" />
 		</div>
 		<div class="page" id="page-basket">
 			<header class="bp-header cf">
@@ -109,7 +127,7 @@
 					"I decided to pick the diet that I thought would maximize my chances of long-term survival." &mdash; Al Gore
 				</p>
 			</header>
-			<img class="poster" src="images/05.png" alt="img03" />
+			<img class="poster" src="images/05.jpg" alt="img03" />
 		</div>
 		<div class="page" id="page-about">
 			<header class="bp-header cf">
@@ -129,7 +147,7 @@
 					"When people ask me why I don't eat meat or any other animal products, I say, 'Because they are unhealthy and they are the product of a violent and inhumane industry.'" &mdash;
 				</p>
 			</header>
-			<img class="poster" src="images/03.png" alt="img06" />
+			<img class="poster" src="images/03.jpg" alt="img06" />
 		</div>
 		<div class="page" id="page-blog">
 			<header class="bp-header cf">
@@ -139,7 +157,7 @@
 					"The question is not, 'Can they reason?' nor, 'Can they talk?' but rather, 'Can they suffer?" &mdash; Jeremy Bentham
 				</p>
 			</header>
-			<img class="poster" src="images/05.png" alt="img01" />
+			<img class="poster" src="images/05.jpg" alt="img01" />
 		</div>
 		<div class="page" id="page-contact">
 			<header class="bp-header cf">
@@ -156,6 +174,7 @@
 	<button class="menu-button"><span>Menu</span></button>
 	<script src="js/classie.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/slideshow.js"></script>
 	<script>
 		var vid = document.getElementById("bgvid");
 		var pauseButton = document.getElementById("vidpause");
