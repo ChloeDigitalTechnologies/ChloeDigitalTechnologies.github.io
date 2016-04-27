@@ -42,9 +42,12 @@
 		// menu button
 		menuCtrl = document.querySelector('button.menu-button'),
 		// the navigation wrapper
-		nav = document.querySelector('.pages-nav'),
+		nav = document.querySelector('.pages-nav'),		
+		nav2 = document.querySelector('.slideshow'),
 		// the menu nav items
-		navItems = [].slice.call(nav.querySelectorAll('.link--page')),
+		navItems1 = [].slice.call(nav.querySelectorAll('.link--page')),
+		navItems2 = [].slice.call(nav2.querySelectorAll('.link--page')),
+		navItems = navItems1.concat(navItems2),
 		// check if menu is open
 		isMenuOpen = false;
 

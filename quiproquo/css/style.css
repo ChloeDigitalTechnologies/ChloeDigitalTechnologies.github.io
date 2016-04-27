@@ -7,24 +7,24 @@
 
 
 #vidpause { display: block; float:none; margin:auto; }
-#vidpausediv {display: block; position: absolute; bottom: 5%; text-align: center;width : 100%; margin:0 auto;}
+#vidpausediv {display: block; position: absolute; bottom: 5%; text-align: center;width : 100vw; margin:0 auto;}
 @media screen and (max-device-width: 800px) {
-	html { background: url(images/logo.png) #000 no-repeat center center fixed; }
+	html { background: url(../images/logo.png) #000 no-repeat center center fixed; }
 	#bgvid { display: none; }
 	#vidpause { display: none; }
 }
 
 
-video#bgvid { position: fixed;
+video#bgvid { position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 100vw;
+    min-height: 100vw;
     width: auto;
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
- background: url('//demosthenes.info/assets/images/logo.png') no-repeat;
+ background: url('../images/logo.png') no-repeat;
   background-size: cover;
   transition: 1s opacity; }
 .stopfade { opacity: .5; }
@@ -44,7 +44,7 @@ video#bgvid { position: fixed;
 	box-shadow: 1px 1px 12px #555;
 }
 
-#sswrapper{
+.sswrapper{
 	position: absolute;
 	top:0;
 	left:0;
@@ -56,13 +56,13 @@ video#bgvid { position: fixed;
 	/*display: table-cell;*/
 	vertical-align: middle;
 }
-.Centerer
+.centerer
 {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
 }
-#slideshow { 
+.slideshow { 
 	position: fixed;
     top: 50%;
     left: 50%;
@@ -76,7 +76,7 @@ video#bgvid { position: fixed;
 	
 }
 
-#slideshow > div { 
+.slideshow > div { 
     position: absolute; 
     top: 10px; 
     left: 10px; 
@@ -87,4 +87,121 @@ video#bgvid { position: fixed;
 .ssi{
 	width:100%;
 	height:auto;
+}
+
+
+/* Menu button */
+
+#st-trigger-effects {
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	}
+.menu-button {
+	position: absolute;
+	z-index: 1000;
+	top: 20px;
+	
+	width: 30px;
+	height: 24px;
+	padding: 0;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+#openMenu {
+	left: 20px;
+}
+#closeMenu {
+	right : 20px;
+}
+
+.closeMenudiv {
+	position: absolute;	
+	top: 0px;
+	right : 0px;	
+	padding: 0;
+}
+.no-js .menu-button {
+	display: none;
+}
+
+.menu-button:hover {background:none;}
+.menu-button::before,
+.menu-button::after,
+.menu-button span {
+	background: #5f656f;
+}
+
+.menu-button::before,
+.menu-button::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	pointer-events: none;
+	-webkit-transition: -webkit-transform 0.25s;
+	transition: transform 0.25s;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+.menu-button span {
+	position: absolute;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 2px;
+	text-indent: 200%;
+	-webkit-transition: opacity 0.25s;
+	transition: opacity 0.25s;
+}
+
+.menu-button::before {
+	-webkit-transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
+	transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
+}
+
+.menu-button::after {
+	-webkit-transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
+	transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
+}
+
+.menu-button--open {z-index: 1000;}
+.menu-button--open span {
+	opacity: 0;
+}
+
+.menu-button--open::before {
+	-webkit-transform: rotate3d(0, 0, 1, 45deg);
+	transform: rotate3d(0, 0, 1, 45deg);
+	z-index:10;
+}
+
+.menu-button--open::after {
+	-webkit-transform: rotate3d(0, 0, 1, -45deg);
+	transform: rotate3d(0, 0, 1, -45deg);
+	z-index:10;
+}
+
+.page {
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: auto;
+    background: #fff;
+    
+}
+
+.menu-logo-wrap {
+	text-align:center;
+	margin:auto;
+	padding:10px;
 }
